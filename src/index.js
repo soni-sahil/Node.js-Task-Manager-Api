@@ -10,7 +10,7 @@ const User = require('./models/user')
 
 const app = express()
 
-const port = process.env.PORT
+const port = process.env.PORT || 3000
 
 // app.use((req , res , next) =>{
 //     res.status(503).send("Under maintenance")
@@ -18,6 +18,7 @@ const port = process.env.PORT
 // })
 
 app.use(express.json())
+
 app.use(userRouter)
 app.use(taskRouter)
 
